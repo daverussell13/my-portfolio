@@ -1,5 +1,10 @@
-import { Button } from "@nextui-org/button";
+import Introduction from "@/components/home/introduction";
+import { Divider } from "@nextui-org/divider";
 
-export default function Home() {
-  return <Button>Click Me!</Button>;
+export default function HomePage() {
+  return (
+    <>
+      <Introduction />
+    </>
+  );
 }
