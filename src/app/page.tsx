@@ -1,10 +1,5 @@
-import Introduction from "@/components/home/introduction";
-import { Divider } from "@nextui-org/divider";
+import Home from "@/components/home";
 
 export default function HomePage() {
-  return (
-    <>
-      <Introduction />
-    </>
-  );
+  return <Home />;
 }

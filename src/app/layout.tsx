@@ -5,6 +5,7 @@ import AppLayout from "@/components/layouts";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Providers } from "./providers";
+import cn from "@/libs/utils";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,8 +21,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
-      <body className={inter.className}>
+    <html lang="en" className="dark text-foreground bg-background">
+      <body className={cn("min-h-screen antialiased", inter.className)}>
         <Providers>
           <AppLayout>{children}</AppLayout>
         </Providers>
