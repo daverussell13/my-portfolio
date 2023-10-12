@@ -54,7 +54,7 @@ const Introduction = () => {
           </div>
         </div>
       </div>
-      <p className="leading-[1.8] md:leading-loose text-neutral-800 dark:text-neutral-300 text-justify">
+      <p className="leading-[1.8] md:leading-loose text-neutral-800 dark:text-neutral-300 sm:text-justify">
         Passionate computer science student with a good foundation in Web
         Development, Android Application Development, and IoT Application
         Development. I&apos;m a collaborative team player dedicated to

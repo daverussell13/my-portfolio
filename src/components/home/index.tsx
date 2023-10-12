@@ -1,6 +1,7 @@
-import Introduction from "@/components/home/introduction";
 import { Divider } from "@nextui-org/divider";
-import Career from "./career";
+
+import Introduction from "@/components/home/introduction";
+import Career from "@/components/home/career";
 
 const Home = () => {
   return (

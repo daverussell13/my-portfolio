@@ -1,10 +1,10 @@
 import "@/styles/globals.css";
 
+import Providers from "@/app/providers";
 import AppLayout from "@/components/layouts";
+import cn from "@/libs/utils";
 
 import type { Metadata } from "next";
-import { Providers } from "./providers";
-import cn from "@/libs/utils";
 import { firaCode, jakartaSans, soraSans } from "@/styles/font";
 
 export const metadata: Metadata = {
