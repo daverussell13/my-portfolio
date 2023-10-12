@@ -1,6 +1,22 @@
 import { Avatar } from "@nextui-org/avatar";
+import Typewriter from "@/components/elements/typewriter";
 
 const Introduction = () => {
+  const greetings = [
+    "Hi",
+    "Hai",
+    "Hej",
+    "Hola",
+    "Bonjour",
+    "Ciao",
+    "안녕",
+    "こんにちは",
+    "你好",
+    "नमस्ते",
+    "Привет",
+    "สวัสดี",
+  ];
+
   return (
     <section className="bg-cover bg-no-repeat space-y-4">
       <div className="flex flex-col gap-5 sm:flex-row">
@@ -14,7 +30,17 @@ const Introduction = () => {
         <div className="flex flex-col justify-center gap-3 sm:gap-2">
           <div className="flex justify-between items-center">
             <div className="flex gap-2 text-2xl lg:text-3xl font-medium font-sora">
-              <h1>Hi, I&apos;m Dave</h1>{" "}
+              <h1 className="flex">
+                <Typewriter
+                  options={{
+                    cursor: "",
+                    autoStart: true,
+                    loop: true,
+                    strings: greetings,
+                  }}
+                />
+                <p>, I&apos;m Dave</p>
+              </h1>{" "}
               <div className="ml-1 animate-waving-hand">👋</div>
             </div>
           </div>
@@ -29,10 +55,10 @@ const Introduction = () => {
         </div>
       </div>
       <p className="leading-[1.8] md:leading-loose text-neutral-800 dark:text-neutral-300 text-justify">
-        Passionate and seasoned Software Engineer with a strong focus on
-        frontend development. Proficient in TypeScript and well-versed in all
-        aspects of web technologies. Collaborative team player dedicated to
-        delivering efficient, scalable, and visually appealing web applications.
+        Passionate computer science student with a good foundation in Web
+        Development, Android Application Development, and IoT Application
+        Development. I&apos;m a collaborative team player dedicated to
+        delivering efficient, scalable, and well performant applications.
       </p>
     </section>
   );

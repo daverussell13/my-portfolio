@@ -17,7 +17,7 @@ import { Link } from "@nextui-org/link";
 export default function NavHeader() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const menuItems = ["Home", "Projects", "Articles", "Web Statistics"];
+  const menuItems = ["Projects", "Articles", "Web Statistics"];
 
   return (
     <Navbar>
