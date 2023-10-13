@@ -1,5 +1,4 @@
 import { CAREER_LIST } from "@/constants/career";
-import { Card } from "@nextui-org/card";
 import { HiOutlineBriefcase as BriefcaseIcon } from "react-icons/hi";
 
 import SectionHeading from "@/components/elements/section-heading";

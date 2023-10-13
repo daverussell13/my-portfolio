@@ -39,11 +39,19 @@ const config: Config = {
         dark: {
           colors: {
             background: "#202023",
+            primary: {
+              DEFAULT: "#88CCCC",
+              foreground: "#000000",
+            },
           },
         },
         light: {
           colors: {
             background: "#f0e7db",
+            primary: {
+              DEFAULT: "#f5c2e7",
+              foreground: "#000000",
+            },
           },
         },
       },

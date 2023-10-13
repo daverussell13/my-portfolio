@@ -1,5 +1,7 @@
 "use client";
 
+import ThemeSwitcher from "@/components/elements/theme-switcher";
+
 import {
   Navbar,
   NavbarBrand,
@@ -11,7 +13,6 @@ import {
 } from "@nextui-org/navbar";
 
 import { LuDownload as DownloadIcon } from "react-icons/lu";
-import { BiSun as SunIcon } from "react-icons/bi";
 import { Avatar, Button } from "@nextui-org/react";
 import { Link } from "@nextui-org/link";
 
@@ -62,9 +63,7 @@ export default function NavHeader() {
         </NavbarContent>
       </NavbarContent>
       <NavbarContent className="hidden md:flex gap-2" justify="end">
-        <Button isIconOnly color="warning" aria-label="Light Mode" size="md">
-          <SunIcon />
-        </Button>
+        <ThemeSwitcher />
         <Button
           variant="ghost"
           startContent={<DownloadIcon className="animate-rain-arrow" />}
