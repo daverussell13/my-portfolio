@@ -58,7 +58,7 @@ const Introduction = () => {
         Passionate computer science student with a good foundation in Web
         Development, Android Application Development, and IoT Application
         Development. I&apos;m a collaborative team player dedicated to
-        delivering efficient, scalable, and well performant applications.
+        delivering efficient, scalable, and well-performing applications.
       </p>
     </section>
   );

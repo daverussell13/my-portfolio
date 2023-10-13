@@ -1,7 +1,10 @@
+import { CAREER_LIST } from "@/constants/career";
+import { Card } from "@nextui-org/card";
 import { HiOutlineBriefcase as BriefcaseIcon } from "react-icons/hi";
 
 import SectionHeading from "@/components/elements/section-heading";
 import SectionSubHeading from "@/components/elements/section-subheading";
+import CareerCard from "./career-card";
 
 const Career = () => {
   return (
@@ -13,12 +16,15 @@ const Career = () => {
         />
         <SectionSubHeading>
           <p className="dark:text-neutral-400">
-            My professional career journey.
+            My professional working and organizational experience
           </p>
         </SectionSubHeading>
       </div>
-
-      <div className="grid md:grid-cols-2 gap-4"></div>
+      <div className="grid md:grid-cols-2 gap-4">
+        {CAREER_LIST.map((data, index) => {
+          return <CareerCard key={index} {...data} />;
+        })}
+      </div>
     </section>
   );
 };
