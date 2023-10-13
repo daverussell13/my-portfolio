@@ -16,7 +16,7 @@ const Career = () => {
         />
         <SectionSubHeading>
           <p className="dark:text-neutral-400">
-            My professional working and organizational experience
+            My working and organizational experience
           </p>
         </SectionSubHeading>
       </div>
