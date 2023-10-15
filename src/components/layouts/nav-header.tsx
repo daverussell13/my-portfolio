@@ -18,16 +18,15 @@ import { Link } from "@nextui-org/link";
 
 export default function NavHeader() {
   return (
-    <Navbar>
+    <Navbar classNames={{ wrapper: "max-w-4xl px-4 lg:px-0" }}>
       <NavbarContent justify="center">
-        <NavbarBrand className="mr-4">
+        <NavbarBrand className="mr-2">
           <Avatar
+            color="primary"
             name="DR"
             radius="sm"
             className="hidden sm:block"
-            classNames={{
-              name: "font-semibold text-medium",
-            }}
+            classNames={{ name: "font-bold" }}
           />
           <Avatar
             isBordered
@@ -65,7 +64,7 @@ export default function NavHeader() {
       <NavbarContent className="hidden md:flex gap-2" justify="end">
         <ThemeSwitcher />
         <Button
-          variant="ghost"
+          color="primary"
           startContent={<DownloadIcon className="animate-rain-arrow" />}
         >
           Download Resume

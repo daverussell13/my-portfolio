@@ -1,6 +1,6 @@
 import "@/styles/globals.css";
 
-import NextTopLoader from "nextjs-toploader";
+import TopLoader from "@/components/elements/top-loader";
 import Providers from "@/app/providers";
 import AppLayout from "@/components/layouts";
 import cn from "@/libs/utils";
@@ -23,25 +23,15 @@ export default function RootLayout({
     <html
       lang="en"
       className={cn(
-        "dark text-foreground bg-background",
+        "text-foreground bg-background",
         jakartaSans.variable,
         soraSans.variable,
         firaCode.variable
       )}
     >
       <body className="min-h-screen antialiased">
-        <NextTopLoader
-          color="#05b6d3"
-          initialPosition={0.08}
-          crawlSpeed={200}
-          height={3}
-          crawl={true}
-          showSpinner={false}
-          easing="ease"
-          speed={200}
-          shadow="0 0 10px #05b6d3,0 0 5px #45c6c0"
-        />
         <Providers>
+          <TopLoader />
           <AppLayout>{children}</AppLayout>
         </Providers>
       </body>

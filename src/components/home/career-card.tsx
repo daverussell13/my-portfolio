@@ -32,32 +32,32 @@ const CareerCard = ({
   return (
     <Card
       isBlurred
-      className="border-none bg-primary/20 dark:bg-primary/10"
+      className="border-none bg-primary/40 dark:bg-primary/10"
       shadow="sm"
     >
       <CardBody className="py-4 px-6">
         <div className="flex items-center gap-5">
           {logo ? (
-            <Image src={logo} width={55} height={55} alt={company} />
+            <Image
+              src={logo}
+              width={55}
+              height={55}
+              alt={company}
+              rounded="rounded"
+            />
           ) : (
             <CompanyIcon size={50} />
           )}
           <div className="space-y-1">
             <h6>{position}</h6>
-            <div className="text-sm text-neutral-600 dark:text-neutral-400 space-y-2">
+            <div className="text-sm text-neutral-500 dark:text-neutral-400 space-y-2">
               <div className="flex items-center gap-1 md:gap-2">
-                <a
-                  href={link || "#"}
-                  target="_blank"
-                  data-umami-event={`Click Career Company Name: ${company}`}
-                >
+                <a href={link || "#"} target="_blank">
                   <span className="underline cursor-pointer hover:text-dark hover:dark:text-white">
                     {company}
                   </span>
                 </a>
-                <span className="text-neutral-300 dark:text-neutral-700">
-                  •
-                </span>
+                <span>•</span>
                 <span>{location}</span>
               </div>
               <div className="flex flex-col md:text-[13px]">

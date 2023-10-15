@@ -49,7 +49,7 @@ const config: Config = {
           colors: {
             background: "#f0e7db",
             primary: {
-              DEFAULT: "#f5c2e7",
+              DEFAULT: "#f2cdcd",
               foreground: "#000000",
             },
           },
