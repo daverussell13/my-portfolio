@@ -10,7 +10,7 @@ const AppLayout = ({ children }: AppLayoutProps) => {
   return (
     <div>
       <NavHeader />
-      <main className="md:mt-4 transition-all duration-300">
+      <main className="md:my-4 transition-all duration-300">
         <div className="max-w-4xl py-4 px-6 lg:p-8 md:p-6 mx-auto">
           {children}
         </div>

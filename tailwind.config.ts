@@ -26,9 +26,14 @@ const config: Config = {
           "60%": { transform: "rotate(0.0deg)" },
           "100%": { transform: "rotate(0.0deg)" },
         },
+        loop: {
+          "0%": { transform: "translateX(0)" },
+          "100%": { transform: "translateX(-50%)" },
+        },
       },
       animation: {
         "waving-hand": "wave 2s linear infinite",
+        "looping-tag": "loop 100s linear infinite",
       },
     },
   },

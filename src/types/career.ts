@@ -1,4 +1,4 @@
-export interface CareerData {
+export type CareerData = {
   position: string;
   company: string;
   logo: string | null;
@@ -9,4 +9,4 @@ export interface CareerData {
   end_date: string | null;
   industry: string;
   link: string | null;
-}
+};
