@@ -98,11 +98,11 @@ const Skills = () => {
           <span>ReactJS</span>
         </Tag>
         <Tag>
-          <FaWhiskeyGlass size={iconSize} class="text-sky-400" />
+          <FaWhiskeyGlass size={iconSize} className="text-sky-400" />
           <span>Gin/Gonic</span>
         </Tag>
         <Tag>
-          <FaStream size={iconSize} class="text-sky-400" />
+          <FaStream size={iconSize} className="text-sky-400" />
           <span>Fiber</span>
         </Tag>
         <Tag>
