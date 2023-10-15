@@ -32,6 +32,7 @@ const Introduction = () => {
             <div className="flex gap-2 text-2xl lg:text-3xl font-medium font-sora">
               <h1 className="flex">
                 <Typewriter
+                  defaultText="Hi"
                   options={{
                     cursor: "",
                     autoStart: true,

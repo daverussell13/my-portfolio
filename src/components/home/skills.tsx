@@ -50,7 +50,7 @@ const Skills = () => {
           <span>PHP</span>
         </Tag>
         <Tag>
-          <SiGo size={iconSize} className="text-blue-300" />
+          <SiGo size={iconSize} className="text-blue-400" />
           <span>Go</span>
         </Tag>
         <Tag>
