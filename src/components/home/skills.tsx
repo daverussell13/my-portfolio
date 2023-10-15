@@ -32,7 +32,7 @@ import React from "react";
 const Skills = () => {
   const iconSize = 24;
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       <div className="space-y-2">
         <SectionHeading
           title="Skills"
