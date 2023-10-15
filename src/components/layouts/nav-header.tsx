@@ -18,7 +18,26 @@ import { Link } from "@nextui-org/link";
 
 export default function NavHeader() {
   return (
-    <Navbar classNames={{ wrapper: "max-w-4xl px-4 lg:px-0" }}>
+    <Navbar
+      classNames={{
+        wrapper: "max-w-4xl px-4 lg:px-0",
+        item: [
+          "flex",
+          "relative",
+          "h-full",
+          "items-center",
+          "!data-[active=true]:text-primary",
+          "data-[active=true]:after:content-['']",
+          "data-[active=true]:after:absolute",
+          "data-[active=true]:after:bottom-0",
+          "data-[active=true]:after:left-0",
+          "data-[active=true]:after:right-0",
+          "data-[active=true]:after:h-[2px]",
+          "data-[active=true]:after:rounded-[2px]",
+          "data-[active=true]:after:bg-primary",
+        ],
+      }}
+    >
       <NavbarContent justify="center">
         <NavbarBrand className="mr-2">
           <Avatar
@@ -39,8 +58,8 @@ export default function NavHeader() {
           <p className="font-bold text-large ml-3">Dave Russell</p>
         </NavbarBrand>
         <NavbarContent className="hidden md:flex gap-4">
-          <NavbarItem>
-            <Link color="foreground" href="#">
+          <NavbarItem isActive>
+            <Link color="foreground" href="#" aria-current="page">
               Home
             </Link>
           </NavbarItem>
@@ -49,8 +68,8 @@ export default function NavHeader() {
               Projects
             </Link>
           </NavbarItem>
-          <NavbarItem isActive>
-            <Link color="foreground" href="#" aria-current="page">
+          <NavbarItem>
+            <Link color="foreground" href="#">
               Articles
             </Link>
           </NavbarItem>
@@ -71,6 +90,7 @@ export default function NavHeader() {
         </Button>
       </NavbarContent>
       <NavbarContent className="md:hidden" justify="end">
+        <ThemeSwitcher />
         <NavbarMenuToggle />
       </NavbarContent>
       <NavbarMenu>
