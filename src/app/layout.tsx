@@ -6,6 +6,7 @@ import AppLayout from "@/components/layouts";
 import cn from "@/libs/utils";
 
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react";
 import { firaCode, jakartaSans, soraSans } from "@/styles/font";
 
 export const metadata: Metadata = {
@@ -32,7 +33,10 @@ export default function RootLayout({
       <body className="min-h-screen antialiased">
         <Providers>
           <TopLoader />
-          <AppLayout>{children}</AppLayout>
+          <AppLayout>
+            {children}
+            <Analytics />
+          </AppLayout>
         </Providers>
       </body>
     </html>
