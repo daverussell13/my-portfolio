@@ -55,8 +55,8 @@ const config: Config = {
           colors: {
             background: "#f0e7db",
             primary: {
-              DEFAULT: "#f2cdcd",
-              foreground: "#000000",
+              DEFAULT: "#3197A8",
+              foreground: "#ffffff",
             },
           },
         },

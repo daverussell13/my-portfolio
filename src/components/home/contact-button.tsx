@@ -23,7 +23,7 @@ const contactButtonType = {
   Email: "bg-green-600",
   Linkedin: "bg-blue-500",
   Twitter: "bg-sky-500",
-  Instagram: "bg-orange-700",
+  Instagram: "bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500",
   Github: "bg-black",
 };
 

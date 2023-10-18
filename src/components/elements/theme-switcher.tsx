@@ -1,4 +1,3 @@
-// app/components/ThemeSwitcher.tsx
 "use client";
 
 import { Button } from "@nextui-org/button";
@@ -23,7 +22,7 @@ const ThemeSwitcher = () => {
         <Button
           onClick={() => setTheme("dark")}
           isIconOnly
-          className="bg-secondary-100"
+          className="text-white bg-secondary-300"
           aria-label="Dark Mode"
           size="md"
         >

@@ -2,7 +2,7 @@ import "@/styles/globals.css";
 
 import TopLoader from "@/components/elements/top-loader";
 import Providers from "@/app/providers";
-import AppLayout from "@/components/layouts";
+import AppLayout from "@/components/layouts/app";
 import cn from "@/libs/utils";
 
 import type { Metadata } from "next";
