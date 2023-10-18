@@ -6,15 +6,24 @@ import {
   BsTwitter as TwitterIcon,
 } from "react-icons/bs";
 
+import {
+  AiOutlineHome as HomeIcon,
+  AiOutlineProject as ProjectIcon,
+} from "react-icons/ai";
+
+import { BiNews as ArticleIcon } from "react-icons/bi";
+
 import { MenuItemData } from "@/types/menu";
 
-const iconSize = 20;
+const socialMediaIconSize = 20;
+const navMenuIconSize = 20;
 
 export const NAVIGATION: MenuItemData[] = [
   {
     title: "Home",
     href: "/",
     isExternal: false,
+    icon: <HomeIcon size={navMenuIconSize} />,
     eventName: "Pages: Home",
     type: "Pages",
   },
@@ -22,6 +31,7 @@ export const NAVIGATION: MenuItemData[] = [
     title: "Projects",
     href: "/projects",
     isExternal: false,
+    icon: <ProjectIcon size={navMenuIconSize} />,
     eventName: "Pages: Projects",
     type: "Pages",
   },
@@ -29,6 +39,7 @@ export const NAVIGATION: MenuItemData[] = [
     title: "Articles",
     href: "/articles",
     isExternal: false,
+    icon: <ArticleIcon size={navMenuIconSize} />,
     eventName: "Pages: Articles",
     type: "Pages",
   },
@@ -38,7 +49,7 @@ export const SOCIAL_MEDIA: MenuItemData[] = [
   {
     title: "Email",
     href: "https://mail.google.com/mail/?view=cm&fs=1&to=daverussell1309@gmail.com",
-    icon: <EmailIcon size={iconSize} />,
+    icon: <EmailIcon size={socialMediaIconSize} />,
     isExternal: true,
     eventName: "Contact: Email",
     className: "bg-green-600",
@@ -47,7 +58,7 @@ export const SOCIAL_MEDIA: MenuItemData[] = [
   {
     title: "Linkedin",
     href: "https://www.linkedin.com/in/dave-russell-kristanto",
-    icon: <LinkedinIcon size={iconSize} />,
+    icon: <LinkedinIcon size={socialMediaIconSize} />,
     isExternal: true,
     eventName: "Social: Linkedin",
     className: "bg-blue-500",
@@ -56,7 +67,7 @@ export const SOCIAL_MEDIA: MenuItemData[] = [
   {
     title: "Twitter",
     href: "https://twitter.com/daperussell",
-    icon: <TwitterIcon size={iconSize} />,
+    icon: <TwitterIcon size={socialMediaIconSize} />,
     isExternal: true,
     eventName: "Social: Twitter",
     className: "bg-sky-500",
@@ -65,7 +76,7 @@ export const SOCIAL_MEDIA: MenuItemData[] = [
   {
     title: "Instagram",
     href: "https://www.instagram.com/daperussell",
-    icon: <InstagramIcon size={iconSize} />,
+    icon: <InstagramIcon size={socialMediaIconSize} />,
     isExternal: true,
     eventName: "Social: Instagram",
     className:
@@ -75,7 +86,7 @@ export const SOCIAL_MEDIA: MenuItemData[] = [
   {
     title: "Github",
     href: "https://github.com/daverussell13",
-    icon: <GithubIcon size={iconSize} />,
+    icon: <GithubIcon size={socialMediaIconSize} />,
     isExternal: true,
     eventName: "Social: Github",
     className: "bg-black",

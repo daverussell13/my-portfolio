@@ -1,4 +1,8 @@
+import { LuDownload as DownloadIcon } from "react-icons/lu";
+
 import { Avatar } from "@nextui-org/avatar";
+import { Button } from "@nextui-org/button";
+
 import Typewriter from "@/components/elements/typewriter";
 
 const Introduction = () => {
@@ -61,6 +65,13 @@ const Introduction = () => {
         Development. I&apos;m a collaborative team player dedicated to
         delivering efficient, scalable, and well-performing applications.
       </p>
+      <Button
+        color="primary"
+        className="font-semibold sm:hidden"
+        startContent={<DownloadIcon />}
+      >
+        Download CV
+      </Button>
     </section>
   );
 };

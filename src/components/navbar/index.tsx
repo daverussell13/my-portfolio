@@ -45,7 +45,7 @@ const Navbar = () => {
         <NavbarItem>
           <ThemeSwitcher />
         </NavbarItem>
-        <NavbarItem className="hidden md:flex">
+        <NavbarItem className="hidden sm:flex">
           <Button
             color="primary"
             className="font-semibold"
