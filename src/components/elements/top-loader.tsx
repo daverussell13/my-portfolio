@@ -14,7 +14,7 @@ const TopLoader = () => {
 
   if (!mounted) return null;
 
-  const color = theme == "light" ? "#f5c2e7" : "#88CCCC";
+  const color = theme == "light" ? "#3197A8" : "#88CCCC";
 
   return (
     <NextTopLoader

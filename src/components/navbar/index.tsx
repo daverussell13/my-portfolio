@@ -11,12 +11,15 @@ import { Button } from "@nextui-org/button";
 import NavbarBrand from "@/components/navbar/brand";
 import NavbarMenu from "@/components/navbar/menu";
 import ThemeSwitcher from "@/components/elements/theme-switcher";
+import NavbarMenuMobile from "@/components/navbar/menu-mobile";
 
 const Navbar = () => {
   return (
     <Nav
+      isBordered
+      className="md:border-none"
       classNames={{
-        wrapper: "max-w-4xl px-4 lg:px-0",
+        wrapper: "max-w-4xl px-4",
         item: [
           "flex",
           "relative",
@@ -48,12 +51,13 @@ const Navbar = () => {
             className="font-semibold"
             startContent={<DownloadIcon />}
           >
-            Download Resume
+            Download CV
           </Button>
         </NavbarItem>
         <NavbarItem className="md:hidden">
           <NavbarMenuToggle />
         </NavbarItem>
+        <NavbarMenuMobile />
       </NavbarContent>
     </Nav>
   );
