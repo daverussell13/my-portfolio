@@ -4,7 +4,7 @@ import clsx from "clsx";
 import NextImage, { ImageProps as NextImageProps } from "next/image";
 import { useState } from "react";
 
-import cn from "@/libs/utils";
+import cn from "@/libs/cn";
 
 type ImageProps = {
   rounded?: string;

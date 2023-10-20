@@ -1,16 +1,19 @@
+import { allProjects } from "contentlayer/generated";
+import ProjectCard from "@/components/elements/ProjectCard";
+
 export default function Projects() {
+  const projects = allProjects.sort(
+    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
+  );
+
   return (
-    <div className="text-center py-16">
-      <h1 className="mb-4 text-3xl font-extrabold text-gray-900 dark:text-white md:text-5xl lg:text-6xl">
-        <span className="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">
-          COMING
-        </span>{" "}
-        SOON
+    <div className="mx-auto max-w-xl py-8">
+      <h1 className="mb-8 text-center text-2xl font-black">
+        Next.js + Contentlayer Example
       </h1>
-      <p className="text-medium font-normal text-gray-500 lg:text-xl dark:text-gray-400 md:max-w-lg max-w-sm mt-2 mx-auto">
-        My portfolio website are still under construction 👷‍♂️🛠️, stay tuned for
-        new updates!
-      </p>
+      {projects.map((project, idx) => (
+        <ProjectCard key={idx} {...project} />
+      ))}
     </div>
   );
 }
