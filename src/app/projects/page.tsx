@@ -1,19 +1,18 @@
-import { allProjects } from "contentlayer/generated";
-import ProjectCard from "@/components/elements/ProjectCard";
+import PageHeading from "@/components/elements/page-heading";
+import ProjectCard from "@/components/projects/project-card";
+import ProjectCardList from "@/components/projects/project-card-list";
+
+const PAGE_TITLE = "Projects";
+const PAGE_DESCRIPTION = "Showcase of my ongoing and completed projects";
 
 export default function Projects() {
-  const projects = allProjects.sort(
-    (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime()
-  );
-
   return (
-    <div className="mx-auto max-w-xl py-8">
-      <h1 className="mb-8 text-center text-2xl font-black">
-        Next.js + Contentlayer Example
-      </h1>
-      {projects.map((project, idx) => (
-        <ProjectCard key={idx} {...project} />
-      ))}
-    </div>
+    <>
+      <PageHeading title={PAGE_TITLE} description={PAGE_DESCRIPTION} />
+      <ProjectCardList>
+        <ProjectCard />
+        <ProjectCard />
+      </ProjectCardList>
+    </>
   );
 }

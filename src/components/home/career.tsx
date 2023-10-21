@@ -3,7 +3,7 @@ import { HiOutlineBriefcase as BriefcaseIcon } from "react-icons/hi";
 
 import SectionHeading from "@/components/elements/section-heading";
 import SectionSubHeading from "@/components/elements/section-subheading";
-import CareerCard from "./career-card";
+import CareerCard from "@/components/home/career-card";
 
 const Career = () => {
   return (
