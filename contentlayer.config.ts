@@ -14,6 +14,11 @@ const computedFields: ComputedFields = {
     type: "string",
     resolve: (doc) => doc._raw.flattenedPath.split("/").slice(1).join("/"),
   },
+  thumbnail: {
+    type: "string",
+    resolve: (doc) =>
+      `/images/projects/thumbnail/${doc._raw.sourceFileName.split(".")[0]}.jpg`,
+  },
 };
 
 // Document types

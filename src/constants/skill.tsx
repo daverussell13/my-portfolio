@@ -8,7 +8,7 @@ export const SKILL_LIST: SkillList = [
   "CSS",
   "Typescript",
   "Javascript",
-  "Cpp",
+  "C++",
   "Laravel",
   "Android",
   "IoT",

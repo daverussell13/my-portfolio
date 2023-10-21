@@ -39,7 +39,6 @@ const config: Config = {
   },
   darkMode: "class",
   plugins: [
-    require("@tailwindcss/line-clamp"),
     require("tailwindcss-animated"),
     nextui({
       themes: {

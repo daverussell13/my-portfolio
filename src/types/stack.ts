@@ -1,5 +1,3 @@
-import { ReactNode } from "react";
-
 export type STACK_KEY =
   | "PHP"
   | "Go"
@@ -8,7 +6,7 @@ export type STACK_KEY =
   | "CSS"
   | "Javascript"
   | "Typescript"
-  | "Cpp"
+  | "C++"
   | "Laravel"
   | "Android"
   | "IoT"
@@ -25,4 +23,4 @@ export type STACK_KEY =
   | "Github"
   | "Postman";
 
-export type StackIcon = Record<STACK_KEY, ReactNode>;
+export type StackIcon = Record<STACK_KEY, JSX.Element>;
