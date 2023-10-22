@@ -35,7 +35,7 @@ export const STACK_ICON: StackIcon = {
   CSS: <SiCss3 size={iconSize} style={{ fill: "#93c5fd" }} />,
   Javascript: <SiJavascript size={iconSize} style={{ fill: "#facc15" }} />,
   Typescript: <SiTypescript size={iconSize} style={{ fill: "#60a5fa" }} />,
-  "C++": <SiCplusplus size={iconSize} style={{ fill: "#4f46e5" }} />,
+  "C++": <SiCplusplus size={iconSize} style={{ fill: "#3b82f6" }} />,
   Laravel: <SiLaravel size={iconSize} style={{ fill: "#ef4444" }} />,
   Android: <SiAndroid size={iconSize} style={{ fill: "#4ade80" }} />,
   IoT: <GiProcessor size={iconSize} />,
