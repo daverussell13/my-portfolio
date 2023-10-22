@@ -1,17 +1,15 @@
-import { LuDownload as DownloadIcon } from "react-icons/lu";
-
 import {
   Navbar as Nav,
   NavbarContent,
   NavbarMenuToggle,
   NavbarItem,
 } from "@nextui-org/navbar";
-import { Button } from "@nextui-org/button";
 
 import NavbarBrand from "@/components/navbar/brand";
 import NavbarMenu from "@/components/navbar/menu";
 import ThemeSwitcher from "@/components/elements/theme-switcher";
 import NavbarMenuMobile from "@/components/navbar/menu-mobile";
+import DownloadCvButton from "../elements/download-cv-button";
 
 const Navbar = () => {
   return (
@@ -46,13 +44,7 @@ const Navbar = () => {
           <ThemeSwitcher />
         </NavbarItem>
         <NavbarItem className="hidden sm:flex">
-          <Button
-            color="primary"
-            className="font-semibold"
-            startContent={<DownloadIcon />}
-          >
-            Download CV
-          </Button>
+          <DownloadCvButton />
         </NavbarItem>
         <NavbarItem className="md:hidden">
           <NavbarMenuToggle />
