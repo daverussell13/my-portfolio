@@ -10,7 +10,7 @@ const PAGE_DESCRIPTION = "Showcase of my ongoing and completed projects";
 export default function Projects() {
   const projects = allProjects.sort(
     (projectA, projectB) =>
-      new Date(projectA.date).getTime() - new Date(projectB.date).getTime()
+      new Date(projectB.date).getTime() - new Date(projectA.date).getTime()
   );
 
   return (
