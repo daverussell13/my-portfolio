@@ -32,7 +32,7 @@ const CareerCard = ({
   return (
     <Card
       isBlurred
-      className="border-none bg-primary/20 dark:bg-primary/10"
+      className="border-none bg-background/50 dark:bg-primary/10"
       shadow="sm"
     >
       <CardBody className="py-4 px-6">

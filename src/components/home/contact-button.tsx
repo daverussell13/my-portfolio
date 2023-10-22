@@ -3,7 +3,7 @@
 import { Button } from "@nextui-org/button";
 import { ReactNode } from "react";
 
-import cn from "@/libs/utils";
+import cn from "@/libs/cn";
 
 interface ContactButtonProps {
   type: ContactButtonType;
