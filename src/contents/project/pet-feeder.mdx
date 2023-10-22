@@ -9,13 +9,15 @@ stack:
   - Gin
   - C++
   - PostgreSQL
+repository: https://github.com/daverussell13/pet-feeder-mobile-app
+demo: https://youtube.com/shorts/034TRkOXWSg?feature=share
 ---
 
-## Project Explanation
+> ## Project Explanation
 
 Automatic Pet Feeder is a mobile android application seamlessly integrated with IoT devices. With just a simple touch, users can easily schedule or instantly dispense pet food from anywhere and at any time. This feature provides users with peace of mind when they have to leave their beloved pets alone for a while, ensuring their furry friends are well taken care of.
 
-## Features
+> ## Features
 
 ### Realtime Feeding
 
@@ -24,5 +26,3 @@ Real-time feeding is one of the key features provided by this application. It of
 ### Scheduled Feeding
 
 The Scheduled Feeding feature enables users to create regular feeding schedules for specific days, hours, and minutes. To implement this feature, the application utilizes a REST API server written in Go and with the help of Gin HTTP framework. This REST API provides endpoints for CRUD operations on the schedule data for each device. Of course, the REST API must validate the user performing these operations through Firebase authentication services. The REST API employs PostgreSQL as the data storage for the device's feeding schedules. Consequently, each time a device is powered on and connected to the internet, it fetches schedule data from the REST API and stores it in the device's local memory. The IoT device then checks the current time against the scheduled feeding times. If there's a pre-set feeding time at that moment, the device will perform feeding action with the specified portion of food.
-
-## The Challenge

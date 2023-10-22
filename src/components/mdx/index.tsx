@@ -19,7 +19,7 @@ const components = {
   h2: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
     <h2
       className={cn(
-        "mt-10 scroll-m-20 border-b pb-1 text-3xl font-semibold tracking-tight first:mt-0",
+        "mt-10 scroll-m-20 pb-1 text-3xl font-semibold tracking-tight first:mt-0",
         className
       )}
       {...props}
@@ -69,7 +69,10 @@ const components = {
   ),
   p: ({ className, ...props }: React.HTMLAttributes<HTMLParagraphElement>) => (
     <p
-      className={cn("leading-7 [&:not(:first-child)]:mt-6", className)}
+      className={cn(
+        "sm:text-justify leading-7 [&:not(:first-child)]:mt-6",
+        className
+      )}
       {...props}
     />
   ),
@@ -88,7 +91,7 @@ const components = {
   }: React.BlockquoteHTMLAttributes<HTMLQuoteElement>) => (
     <blockquote
       className={cn(
-        "mt-6 border-l-2 pl-6 italic [&>*]:text-muted-foreground",
+        "mt-6 border-primary border-l-4 pl-4 [&>*]:text-muted-foreground",
         className
       )}
       {...props}
@@ -165,11 +168,11 @@ interface MdxProps {
   code: string;
 }
 
-export function Mdx({ code }: MdxProps) {
+export default function Mdx({ code }: MdxProps) {
   const Component = useMDXComponent(code);
 
   return (
-    <div className="mdx">
+    <div className="mdx border-foreground">
       <Component components={components} />
     </div>
   );

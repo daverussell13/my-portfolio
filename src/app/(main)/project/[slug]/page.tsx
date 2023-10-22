@@ -1,6 +1,11 @@
 import { allProjects } from "contentlayer/generated";
 import { notFound } from "next/navigation";
-import { Mdx } from "@/components/mdx";
+
+import Mdx from "@/components/mdx";
+import ProjectDetail from "@/components/projects/project-detail";
+
+import { STACK_KEY } from "@/types/stack";
+import { Divider } from "@nextui-org/divider";
 
 interface ProjectProps {
   params: {
@@ -16,5 +21,18 @@ async function getProjectFromParams(slug: string) {
 
 export default async function Project({ params }: ProjectProps) {
   const project = await getProjectFromParams(params.slug);
-  return <Mdx code={project.body.code} />;
+  return (
+    <main>
+      <ProjectDetail
+        title={project.title}
+        imageUrl={project.thumbnail}
+        description={project.description}
+        stacks={project.stack as STACK_KEY[]}
+        repository={project.repository}
+        demo={project.demo}
+      />
+      <Divider className="mt-6" />
+      <Mdx code={project.body.code} />
+    </main>
+  );
 }
