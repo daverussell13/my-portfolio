@@ -1,0 +1,28 @@
+---
+title: Automatic Pet Feeder
+description: A mobile app that connects to an IoT device for real-time or scheduled feeding
+date: 2023-04-01
+stack:
+  - Android
+  - Java
+  - Go
+  - Gin
+  - C++
+  - PostgreSQL
+---
+
+## Project Explanation
+
+Automatic Pet Feeder is a mobile android application seamlessly integrated with IoT devices. With just a simple touch, users can easily schedule or instantly dispense pet food from anywhere and at any time. This feature provides users with peace of mind when they have to leave their beloved pets alone for a while, ensuring their furry friends are well taken care of.
+
+## Features
+
+### Realtime Feeding
+
+Real-time feeding is one of the key features provided by this application. It offers users an interface to select the number of food dispensing cycles to ensure the appropriate portion size for their pets. This feature is implemented using the MQTT communication protocol. There are two roles involved in this communication protocol which are the publisher and the subscriber. In the case of real-time feeding, the mobile application acts as the publisher to send the feeding commands, while the IoT device serves as the subscriber "listening" for these incoming commands. This protocol needs a broker that acts like a post office that forwards messages from the publisher to the relevant subscribers. The MQTT broker used in this application is emqx.io because EMQX is one of the open-source MQTT brokers that provides a free-to-use public broker.
+
+### Scheduled Feeding
+
+The Scheduled Feeding feature enables users to create regular feeding schedules for specific days, hours, and minutes. To implement this feature, the application utilizes a REST API server written in Go and with the help of Gin HTTP framework. This REST API provides endpoints for CRUD operations on the schedule data for each device. Of course, the REST API must validate the user performing these operations through Firebase authentication services. The REST API employs PostgreSQL as the data storage for the device's feeding schedules. Consequently, each time a device is powered on and connected to the internet, it fetches schedule data from the REST API and stores it in the device's local memory. The IoT device then checks the current time against the scheduled feeding times. If there's a pre-set feeding time at that moment, the device will perform feeding action with the specified portion of food.
+
+## The Challenge
