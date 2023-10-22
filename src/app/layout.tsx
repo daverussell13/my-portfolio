@@ -33,10 +33,8 @@ export default function RootLayout({
       <body className="min-h-screen antialiased">
         <Providers>
           <TopLoader />
-          <AppLayout>
-            {children}
-            <Analytics />
-          </AppLayout>
+          <Analytics />
+          {children}
         </Providers>
       </body>
     </html>

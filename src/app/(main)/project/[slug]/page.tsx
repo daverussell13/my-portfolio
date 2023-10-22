@@ -16,9 +16,5 @@ async function getProjectFromParams(slug: string) {
 
 export default async function Project({ params }: ProjectProps) {
   const project = await getProjectFromParams(params.slug);
-  return (
-    <div>
-      <Mdx code={project.body.code} />
-    </div>
-  );
+  return <Mdx code={project.body.code} />;
 }
