@@ -19,10 +19,75 @@ Automatic Pet Feeder is a mobile android application seamlessly integrated with 
 
 > ## Features
 
+### Authentication
+
+<YouTubeEmbed
+  id='2dLm8tqVtXM'
+  title='Authentication Demo'
+  poster='maxresdefault'
+  noCookie={true}
+/>
+
+Users can create a new account by entering some personal information in the registration form. They can also log-in using their other social media accounts to authenticate within the application.
+
 ### Realtime Feeding
 
-Real-time feeding is one of the key features provided by this application. It offers users an interface to select the number of food dispensing cycles to ensure the appropriate portion size for their pets. This feature is implemented using the MQTT communication protocol. There are two roles involved in this communication protocol which are the publisher and the subscriber. In the case of real-time feeding, the mobile application acts as the publisher to send the feeding commands, while the IoT device serves as the subscriber "listening" for these incoming commands. This protocol needs a broker that acts like a post office that forwards messages from the publisher to the relevant subscribers. The MQTT broker used in this application is emqx.io because EMQX is one of the open-source MQTT brokers that provides a free-to-use public broker.
+<ImageContainer>
+  <Image
+    src="/images/projects/content/pet-feeder/dashboard-ui.jpg"
+    width="216"
+    height="468"
+  />
+  <Image
+    src="/images/projects/content/pet-feeder/realtime-feeding-ui.jpg"
+    width="216"
+    height="468"
+  />
+</ImageContainer>
+
+Real-time feeding is one of the key features provided by this application. It offers users an interface to select the number of food dispensing cycles to ensure the appropriate portion size for their pets.
 
 ### Scheduled Feeding
 
-The Scheduled Feeding feature enables users to create regular feeding schedules for specific days, hours, and minutes. To implement this feature, the application utilizes a REST API server written in Go and with the help of Gin HTTP framework. This REST API provides endpoints for CRUD operations on the schedule data for each device. Of course, the REST API must validate the user performing these operations through Firebase authentication services. The REST API employs PostgreSQL as the data storage for the device's feeding schedules. Consequently, each time a device is powered on and connected to the internet, it fetches schedule data from the REST API and stores it in the device's local memory. The IoT device then checks the current time against the scheduled feeding times. If there's a pre-set feeding time at that moment, the device will perform feeding action with the specified portion of food.
+<ImageContainer>
+  <Image
+    src="/images/projects/content/pet-feeder/scheduled-feeding-list-ui.jpg"
+    width="216"
+    height="468"
+  />
+  <Image
+    src="/images/projects/content/pet-feeder/scheduled-feeding-ui.jpg"
+    width="216"
+    height="468"
+  />
+</ImageContainer>
+
+Scheduled feeding is a feature that allows users to create automatic feeding schedules for specific days, times, and minutes with customizable portion sizes. Users can also delete previously set schedules, offering flexibility to tailor feeding times according to the pet owner's preferences.
+
+### Bluetooth Pairing
+
+<YouTubeEmbed
+  id='7LOFKzE0aCw'
+  title='Bluetooth Pairing Demo'
+  poster='maxresdefault'
+  noCookie={true}
+/>
+
+Bluetooth pairing is a feature designed to connect the device to available internet networks in its vicinity. This configuration needs to be done only once, and thereafter, the device will remember the SSID and password, attempting to establish a connection automatically every time it's powered on.
+
+> ## Device prototype
+
+<ImageContainer>
+  <Image
+    src="/images/projects/content/pet-feeder/device-prototype-front.jpg"
+    width="216"
+    height="384"
+  />
+  <Image
+    src="/images/projects/content/pet-feeder/device-prototype-back.jpg"
+    width="216"
+    height="384"
+  />
+</ImageContainer>
+
+Here's a prototype showcase of the automatic pet feeder device. In this setup, the ESP32 serves as the core microcontroller responsible for managing the timed opening and closing of the food compartment. Additionally, a microservo acts as the primary driver for the food compartment door. You can find the project demonstration <a className="text-primary underline" href="#live">Here</a>.

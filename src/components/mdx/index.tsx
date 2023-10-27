@@ -1,10 +1,16 @@
 import { useMDXComponent } from "next-contentlayer/hooks";
 
-import Image from "next/image";
+import Image, { ImageProps } from "next/image";
+import Link from "next/link";
+
+import YouTubeEmbed, {
+  YouTubeEmbedProps,
+} from "@/components/elements/youtube-embed";
 import MdxCard from "@/components/mdx/mdx-card";
 import Callout from "@/components/mdx/callout";
 
 import cn from "@/libs/cn";
+import { ReactNode } from "react";
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -159,7 +165,24 @@ const components = {
       {...props}
     />
   ),
-  Image,
+  ImageContainer: ({
+    className,
+    children,
+  }: {
+    className?: string;
+    children: ReactNode;
+  }) => (
+    <div className={cn("mt-8 flex flex-col xs:flex-row gap-4", className)}>
+      {children}
+    </div>
+  ),
+  Image: ({ alt, ...props }: ImageProps) => (
+    <Image {...props} alt="Content Image" />
+  ),
+  YouTubeEmbed: ({ ...props }: YouTubeEmbedProps) => (
+    <YouTubeEmbed className="mt-8" {...props} />
+  ),
+  Link,
   Callout,
   Card: MdxCard,
 };

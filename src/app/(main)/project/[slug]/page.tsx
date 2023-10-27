@@ -22,7 +22,7 @@ async function getProjectFromParams(slug: string) {
 export default async function Project({ params }: ProjectProps) {
   const project = await getProjectFromParams(params.slug);
   return (
-    <main>
+    <main className="scroll-smooth">
       <ProjectDetail
         title={project.title}
         imageUrl={project.thumbnail}
@@ -32,7 +32,9 @@ export default async function Project({ params }: ProjectProps) {
         demo={project.demo}
       />
       <Divider className="mt-6" />
-      <Mdx code={project.body.code} />
+      <article>
+        <Mdx code={project.body.code} />
+      </article>
     </main>
   );
 }

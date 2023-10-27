@@ -10,6 +10,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      screens: {
+        xs: "540px", // min-width
+      },
       fontFamily: {
         sans: ["var(--jakartaSans-font)"],
         sora: ["var(--soraSans-font)"],
