@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "npm run build-content && next dev",
     "build": "npm run build-content && next build",
     "start": "next start",
     "lint": "next lint",
@@ -24,6 +24,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-icons": "^4.11.0",
+    "react-lite-youtube-embed": "^2.3.52",
     "sharp": "^0.32.6",
     "tailwind-merge": "^1.14.0",
     "tailwindcss-animated": "^1.0.1",
